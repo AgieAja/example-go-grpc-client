@@ -23,6 +23,7 @@ func main() {
 	api := r.Group("/api")
 	v1 := api.Group("/v1")
 	v1.GET("/greet", greet(conn))
+	v1.GET("/product", getProduct(conn))
 	r.Run(":8080")
 }
 
